@@ -38,6 +38,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="date"],
 input[type="number"],
 select {
     width: 200px;
@@ -64,4 +65,9 @@ input[type="submit"]:hover {
 a {
 	display: block;
 	margin: 20px;
+}
+
+#easter-egg {
+  display: none;
+  text-align: center;
 }

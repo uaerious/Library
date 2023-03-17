@@ -18,6 +18,7 @@ def book_seat():
         name = request.form['name']
         email = request.form['email']
         seat = request.form['seat']
+        date = request.form['date']
         time = request.form['time']
 
     if seat in bookings:
@@ -25,7 +26,7 @@ def book_seat():
         return render_template('error.html', message=message)
     else:
         # Add booking to dictionary
-        bookings[seat] = {'name': name, 'email': email, 'time': time}
+        bookings[seat] = {'name': name, 'email': email, 'date': date, 'time': time}
         return redirect('/confirm')
 
 @app.route('/confirm')

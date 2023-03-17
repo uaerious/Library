@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/256/bookshop.png">
+  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+  
 </head>
 <body>
   	<h1>Library Seat Booking</h1>
@@ -25,6 +27,9 @@
 
 		</select>
 
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    
 		<label for="time">Time:</label>
 		<select id="time" name="time" required>
 			<option value="">Select a time slot</option>
@@ -37,5 +42,13 @@
 		<input type="submit" value="Book Seat">
 	</form>
 
+  <div id="easter-egg">
+    <p>EASTER EGG!
+      <br>
+    CLOSE
+    </p>
+  </div>
+
+  
 </body>
 </html>
