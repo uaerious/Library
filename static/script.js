@@ -11,7 +11,7 @@ document.addEventListener("dblclick", function(event) {
   }
 });
 
-document.addEventListener("click", function(event) {
+document.addEventListener("dblclick", function(event) {
   var selectedText = window.getSelection().toString();
   if (selectedText === "CLOSE") {
     document.getElementById("easter-egg").style.display = "none";
