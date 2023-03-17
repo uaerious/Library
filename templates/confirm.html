@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
 	<h1>Booking Confirmation</h1>
 	{% if bookings %}
 		{% for seat, booking in bookings.items() %}
-			<p>{{ seat }} is booked by {{ booking.name }} ({{ booking.email }}).</p>
+			<p>{{ seat }} is booked by {{ booking.name }} ({{ booking.email }}, {{ booking.time }}).</p>
 		{% endfor %}
 	{% else %}
 		<p>No bookings have been made.</p>
