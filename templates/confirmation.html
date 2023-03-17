@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirmation Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/256/bookshop.png">
+</head>
+<body>
+	<div class="container">
+		<h1>Booking Confirmation</h1>
+		{% if booking %}
+			<p>Your seat has been booked successfully:</p>
+			<ul>
+				<li>Name: {{ booking['name'] }}</li>
+				<li>Email: {{ booking['email'] }}</li>
+				<li>Seat: {{ booking['seat'] }}</li>
+				<li>Date: {{ booking['date'] }}</li>
+        <li>Time: {{ booking['timeslot'] }}</li>
+			</ul>
+		{% else %}
+			<p>Sorry, your booking could not be completed.</p>
+		{% endif %}
+	</div>
+	<a href="/">Book Another Seat</a>
+</body>
+</html>
