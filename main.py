@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 seats = ['A1', 'A2', 'A3', 'B1', 'B2', 'B3']
-timeslots = ['10:00', '12:00', '14:00', '16:00']
+timeslots = ['9:00', '11:00', '13:00', '15:00']
 
 # Dictionary to store bookings
 bookings = {}
