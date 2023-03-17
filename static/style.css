@@ -1,13 +1,13 @@
 @media (prefers-color-scheme: dark){
   body{
-    background-color: darkblue;
+    background-color: #004454;
     color: white;
   }  
 }
 
 @media (prefers-color-scheme: light){
   body{
-    background-color: orange;
+    background-color: #f95602;
     color: black;
   }
 }
@@ -20,7 +20,8 @@ body {
 h1 {
 	margin-top: 0;
   text-align: center;
-  color: red;
+  color: #004454;
+  background-color: #ADD8E6;
 }
 
 form {
@@ -42,9 +43,9 @@ input[type="date"],
 input[type="number"],
 select {
     width: 200px;
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     border: none;
 }
 
