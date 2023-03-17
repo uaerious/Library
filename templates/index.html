@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library Seat Booking</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/256/bookshop.png">
+</head>
+<body>
+	<h1>Library Seat Booking</h1>
+	<form method="POST" action="/book">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+    
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+    
+		<label for="seat">Seat:</label>
+		<select id="seat" name="seat" required>
+
+			{% for seat in seats %}
+				<option value="{{ seat }}">{{ seat }}</option>
+			{% endfor %}
+
+		</select>
+		<input type="submit" value="Book">
+	</form>
+</body>
+</html>
