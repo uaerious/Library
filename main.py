@@ -35,6 +35,11 @@ def book_seat():
 
 	# Store the booking information in a session variable
 	session['booking'] = {'name': name, 'email': email, 'seat': seat, 'date': date, 'timeslot': timeslot}
+  
+  # Write booking information to file
+	with open('bookings.txt', 'a') as f:
+		f.write(f"Name: {name}\nEmail: {email}\nSeat: {seat}\nDate: {date}, {timeslot}\n\n")
+
 
 	return redirect('/confirmation')
 
